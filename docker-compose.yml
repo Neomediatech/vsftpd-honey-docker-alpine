@@ -1,31 +1,15 @@
-# dobbiamo mettere version 2 a causa di portainer, che accetta solo questa versione (per adesso, al 26 set 2018)
-version: '2'
+version: '3'
 
 x-environment: &common-vars
     TZ: Europe/Rome
 
 services:
   vsftpd:
-    image: vsftpd-honey-alpine-neo:latest
+    image: neomediatech/vsftpd-honey-alpine:latest
     hostname: vsftpd-honey
-    expose:
-      - '20'
-      - '21'
-      - '49500-49510'
     ports:
       - '20:20'
       - '21:21'
-      - '49500:49500'
-      - '49501:49501'
-      - '49502:49502'
-      - '49503:49503'
-      - '49504:49504'
-      - '49505:49505'
-      - '49506:49506'
-      - '49507:49507'
-      - '49508:49508'
-      - '49509:49509'
-      - '49510:49510'
     volumes:
       - /srv/data/docker/containers/honeypot/logs/:/data/logs/
     environment:
