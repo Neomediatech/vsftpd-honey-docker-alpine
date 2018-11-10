@@ -20,7 +20,7 @@ version: '3'
 
 services:  
   vsftpd:  
-    image: neomediatech/vsftpd-honey-alpine-neo:latest  
+    image: neomediatech/vsftpd-honey-alpine:latest  
     hostname: vsftpd-honey  
     ports:  
       - '20:20'  
